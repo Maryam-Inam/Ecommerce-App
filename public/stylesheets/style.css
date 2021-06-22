@@ -17,16 +17,6 @@ a {
 .navbar-nav nav-item active {
   color: aquamarine;
 }
-/*
-.navbar-nav a.nav-link {
-  background-color: #04aa6d;
-  color: white;
-} */
-/* .nav-item {
-  overflow: hidden;
-  background-color:rgb(80, 75, 68);
-  color: white; 
-} */
  .nav-item a {
    float: left;
    color: #f2f2f2;
@@ -39,15 +29,24 @@ a {
    background-color: #ddd;
    color: black;
  }
- /* .navbar a.active {
-   background-color: #04aa6d;
-   color: white;
- } */
+  .navbar a {
+   /* background-color: #04aa6d; */
+   color: white !important;
+ } 
+  ul.navbar-nav li a {
+    color: rgb(5, 5, 5) !important;
+  }
+  ul.navbar-nav li a:hover {
+    color: blue !important;
+  } 
+  /* ul.navbar-nav li.active a:active {
+    color: green !important;
+  } */
  .collapse {
    background-color:rgb(180, 173, 164)
  }
- .navbar{
-   background-image: linear-gradient(to right);
+ .bg-custom{
+   background-color: rgb(109, 115, 119);
    color: white;
  }
  h1 {
