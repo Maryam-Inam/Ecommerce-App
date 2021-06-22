@@ -1,19 +1,20 @@
 extends ../layout
 
 block content
-    .row
-        .col-sm-8
-            h1=title
-        .col-sm-4
-            a(href="/products/add", class="btn btn-success float-right") Add New Product
+    //- .row
+        //- .col-sm-8
+    h1 Products Description
+    
+        //- .col-sm-4
+    a(href="/products/add", class="btn btn-primary float-centre" id="addbtn") Add New Product
     table.table
         thead
             tr
                 th Name
                 th Price
-                th Discription
+                th Description
                 th Actions
-                th rating
+                th Rating
         tbody
             each product in products
                 tr
@@ -23,26 +24,26 @@ block content
                     td
                         a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
                         a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
-                        a(href="/products/cart/"+product._id, class="btn btn-info") Add To Cart
+                        a(href="/products/cart/"+product._id, class="btn btn-dark") Add To Cart
                     td
                         if product.rating > 0
                             span(class="fa fa-star checked")
                         else 
-                            span(class="fa fa-star ")
+                            span(class="fa fa-star unchecked")
                         if product.rating > 1
                             span(class="fa fa-star checked")
                         else 
-                            span(class="fa fa-star")
+                            span(class="fa fa-star unchecked")
                         if product.rating > 2
                             span(class="fa fa-star checked")
                         else 
-                            span(class="fa fa-star")
+                            span(class="fa fa-star unchecked")
                         if product.rating > 3
                             span(class="fa fa-star checked")
                         else 
-                            span(class="fa fa-star")
+                            span(class="fa fa-star unchecked")
                         if product.rating > 4
                             span(class="fa fa-star checked")
                         else 
-                            span(class="fa fa-star")
+                            span(class="fa fa-star unchecked")
                             
