@@ -5,7 +5,7 @@ block content
     form(action="/products/edit/"+product._id,method="post")
         .form-group
             label(for="name") Product Name
-            input#name(type="text", class="form-control", name="name", value=product.name,placeholder="Name(Alphabets only)", required)
+            input#name(type="text", class="form-control", onkeypress="return /[a-z]/i.test(event.key)" name="name", value=product.name,placeholder="Name(Alphabets only)", required)
         .form-group
             label(for="price") Product Price
             input#price(type="Number", class="form-control", name="price", value=product.price, required)
